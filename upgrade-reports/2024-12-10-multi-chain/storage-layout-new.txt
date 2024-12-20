@@ -1,0 +1,39 @@
+forge inspect --pretty Vault storage-layout
+| Name                                 | Type                                                    | Slot | Offset | Bytes | Contract                  |
+|--------------------------------------|---------------------------------------------------------|------|--------|-------|---------------------------|
+| __deprecated__initialized            | uint8                                                   | 0    | 0      | 1     | src/vault/Vault.sol:Vault |
+| __deprecated__initializing           | bool                                                    | 0    | 1      | 1     | src/vault/Vault.sol:Vault |
+| snarkVerifier                        | address                                                 | 0    | 2      | 20    | src/vault/Vault.sol:Vault |
+| circuitVersion                       | string                                                  | 1    | 0      | 32    | src/vault/Vault.sol:Vault |
+| eternalTreeRoot                      | uint256                                                 | 2    | 0      | 32    | src/vault/Vault.sol:Vault |
+| ephemeralTreeRoot                    | uint256                                                 | 3    | 0      | 32    | src/vault/Vault.sol:Vault |
+| l1ToL2MessageQueueHash               | mapping(uint256 => bytes32)                             | 4    | 0      | 32    | src/vault/Vault.sol:Vault |
+| l1ToL2MessageQueueTailIndex          | uint256                                                 | 5    | 0      | 32    | src/vault/Vault.sol:Vault |
+| l1ToL2MessageQueueCommitIndex        | uint256                                                 | 6    | 0      | 32    | src/vault/Vault.sol:Vault |
+| l2ToL1MessageQueueCommitHash         | bytes32                                                 | 7    | 0      | 32    | src/vault/Vault.sol:Vault |
+| admin                                | address                                                 | 8    | 0      | 20    | src/vault/Vault.sol:Vault |
+| operators                            | mapping(address => bool)                                | 9    | 0      | 32    | src/vault/Vault.sol:Vault |
+| assetAddressToId                     | mapping(address => uint256)                             | 10   | 0      | 32    | src/vault/Vault.sol:Vault |
+| assetIdToInfo                        | mapping(uint256 => struct DataTypes.AssetInfo)          | 11   | 0      | 32    | src/vault/Vault.sol:Vault |
+| pendingWithdraw                      | mapping(address => mapping(uint256 => uint256))         | 12   | 0      | 32    | src/vault/Vault.sol:Vault |
+| __deprecated__vesselKeyToUserAddress | mapping(bytes => address)                               | 13   | 0      | 32    | src/vault/Vault.sol:Vault |
+| domainSeparator                      | bytes32                                                 | 14   | 0      | 32    | src/vault/Vault.sol:Vault |
+| lastCommitBatchId                    | uint256                                                 | 15   | 0      | 32    | src/vault/Vault.sol:Vault |
+| lastCommitEventId                    | uint256                                                 | 16   | 0      | 32    | src/vault/Vault.sol:Vault |
+| __deprecated__status                 | uint256                                                 | 17   | 0      | 32    | src/vault/Vault.sol:Vault |
+| exitManagers                         | mapping(address => bool)                                | 18   | 0      | 32    | src/vault/Vault.sol:Vault |
+| fastExitUserNonce                    | mapping(address => mapping(uint256 => bool))            | 19   | 0      | 32    | src/vault/Vault.sol:Vault |
+| wethAddress                          | address                                                 | 20   | 0      | 20    | src/vault/Vault.sol:Vault |
+| __deprecated__mqEncoder              | address                                                 | 21   | 0      | 20    | src/vault/Vault.sol:Vault |
+| userApiLogicAddress                  | address                                                 | 22   | 0      | 20    | src/vault/Vault.sol:Vault |
+| managerApiLogicAddress               | address                                                 | 23   | 0      | 20    | src/vault/Vault.sol:Vault |
+| messageQueueLogicAddress             | address                                                 | 24   | 0      | 20    | src/vault/Vault.sol:Vault |
+| tokenManagerLogicAddress             | address                                                 | 25   | 0      | 20    | src/vault/Vault.sol:Vault |
+| multiChainLogicAddress               | address                                                 | 26   | 0      | 20    | src/vault/Vault.sol:Vault |
+| crossChainPortalContract             | contract ICrossChainPortal                              | 27   | 0      | 20    | src/vault/Vault.sol:Vault |
+| logicChainId                         | uint32                                                  | 27   | 20     | 4     | src/vault/Vault.sol:Vault |
+| primaryLogicChainId                  | uint32                                                  | 27   | 24     | 4     | src/vault/Vault.sol:Vault |
+| chainCnt                             | uint32                                                  | 27   | 28     | 4     | src/vault/Vault.sol:Vault |
+| preCommitCheckpointList              | mapping(uint32 => struct DataTypes.PreCommitCheckpoint) | 28   | 0      | 32    | src/vault/Vault.sol:Vault |
+| postCommitConfirmation               | struct DataTypes.PostCommitConfirmation                 | 29   | 0      | 128   | src/vault/Vault.sol:Vault |
+| isConfigured                         | bool                                                    | 33   | 0      | 1     | src/vault/Vault.sol:Vault |

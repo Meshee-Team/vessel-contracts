@@ -1,0 +1,15 @@
+@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/
+@openzeppelin-upgradeable/=lib/openzeppelin-contracts-upgradeable/
+@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/
+@prb/test/=lib/prb-test/src/
+forge-std/=lib/forge-std/src/
+src/=src/
+test/=test/
+
+@layerzerolabs/oapp-evm/=lib/devtools/packages/oapp-evm/
+@layerzerolabs/oapp-evm-upgradeable/=lib/devtools/packages/oapp-evm-upgradeable/
+@layerzerolabs/test-devtools-evm-foundry/=lib/devtools/packages/test-devtools-evm-foundry/
+@layerzerolabs/lz-evm-protocol-v2/=lib/layerzero-v2/packages/layerzero-v2/evm/protocol/
+@layerzerolabs/lz-evm-messagelib-v2/=lib/layerzero-v2/packages/layerzero-v2/evm/messagelib/
+@layerzerolabs/lz-evm-v1-0.7/=lib2/@layerzerolabs/lz-evm-v1-0.7/
+solidity-bytes-utils/=lib/solidity-bytes-utils/

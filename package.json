@@ -1,0 +1,42 @@
+{
+  "name": "@Meshee-Team/meex-contracts",
+  "description": "",
+  "version": "1.0.0",
+  "author": {
+    "name": "Meshee-Team",
+    "url": "https://github.com/Meshee-Team"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "eslint": "^8.0.1",
+    "eslint-config-standard-with-typescript": "^39.1.1",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
+    "eslint-plugin-promise": "^6.0.0",
+    "prettier": "^2.8.7",
+    "solhint-community": "^3.5.0"
+  },
+  "keywords": [
+    "blockchain",
+    "ethereum",
+    "forge",
+    "foundry",
+    "smart-contracts",
+    "solidity"
+  ],
+  "private": true,
+  "scripts": {
+    "build": "forge build --out abi --names --sizes",
+    "clean": "rm -rf cache out abi",
+    "lint": "pnpm solhint:check && pnpm eslint:check && pnpm prettier:check",
+    "solhint:check": "pnpm solhint '{script,src,test}/**/*.sol'",
+    "eslint:check": "npx eslint . --ext .ts",
+    "prettier:check": "prettier --check '**/*.{json,md,yml}'",
+    "lint:fix": "pnpm eslint:fix && pnpm prettier:fix",
+    "eslint:fix": "npx eslint . --ext .ts --fix",
+    "prettier:fix": "prettier --write '**/*.{json,md,yml}'"
+  },
+  "dependencies": {
+    "@layerzerolabs/lz-evm-v1-0.7": "^3.0.18"
+  }
+}

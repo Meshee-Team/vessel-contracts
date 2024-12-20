@@ -1,0 +1,4 @@
+Step Description                                Ether Usage
+     Etherscan GasPrice = 9.69 Gwei
+1.1  Send PreCommitCheckpoint CrossChain Tx Gas 360734 * 9.69 Gwei = 0.003 $ETH
+1.2  Send PreCommitCheckpoint L0 Quote          0.00009385 $ETH

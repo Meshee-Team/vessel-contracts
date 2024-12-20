@@ -1,0 +1,27 @@
+# directories
+cache
+node_modules
+out
+abi
+.idea
+
+# files
+*.env
+*.log
+.DS_Store
+.pnp.*
+lcov.info
+yarn.lock
+
+# broadcasts
+!broadcast
+broadcast/*
+broadcast/*/31337/
+
+# script related
+script/.config.*.json
+!script/.config.example.json
+script/logs
+script/**/*.log
+script/**/*.js
+script/config-backup

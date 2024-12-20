@@ -1,0 +1,64 @@
+forge build --via-ir --out abi --names --sizes
+
+Before
+| Contract                    | Size (B) | Margin (B) |
+|-----------------------------|----------|------------|
+| Address                     |        4 |     24,572 |
+| Constants                   |        4 |     24,572 |
+| EIP712                      |      450 |     24,126 |
+| ERC1967Proxy                |      177 |     24,399 |
+| ERC20                       |    2,767 |     21,809 |
+| EnumerableSet               |        4 |     24,572 |
+| Governance                  |    1,658 |     22,918 |
+| IntegrationProof            |    4,655 |     19,921 |
+| IntegrationVerifier         |        4 |     24,572 |
+| MainStorage                 |      240 |     24,336 |
+| Math                        |        4 |     24,572 |
+| MessageQueue                |    4,484 |     20,092 |
+| ProxyAdmin                  |    1,996 |     22,580 |
+| SafeERC20                   |        4 |     24,572 |
+| SignedMath                  |        4 |     24,572 |
+| StorageSlot                 |        4 |     24,572 |
+| Strings                     |        4 |     24,572 |
+| Token                       |    3,153 |     21,423 |
+| TokenManager                |    5,122 |     19,454 |
+| TransparentUpgradeableProxy |    2,873 |     21,703 |
+| Users                       |    6,102 |     18,474 |
+| Vault                       |   21,267 |      3,309 |
+| VaultProxy                  |    2,873 |     21,703 |
+| VaultProxyAdmin             |    1,996 |     22,580 |
+| VerifierManager             |    4,137 |     20,439 |
+| VesselOwner                 |    5,148 |     19,428 |
+
+After
+| Contract                    | Size (B) | Margin (B) |
+|-----------------------------|----------|------------|
+| Address                     |        4 |     24,572 |
+| Constants                   |        4 |     24,572 |
+| EIP712                      |      739 |     23,837 |
+| ERC1967Proxy                |      177 |     24,399 |
+| EnumerableSet               |        4 |     24,572 |
+| FastWithdrawManager         |   10,029 |     14,547 |
+| Governance                  |    2,201 |     22,375 |
+| IntegrationProof            |    4,655 |     19,921 |
+| IntegrationVerifier         |        4 |     24,572 |
+| MainStorage                 |      436 |     24,140 |
+| Math                        |        4 |     24,572 |
+| MessageQueue                |    2,578 |     21,998 |
+| MessageQueueEncoder         |    4,956 |     19,620 |
+| ProxyAdmin                  |    1,996 |     22,580 |
+| SafeERC20                   |        4 |     24,572 |
+| SafeTransferLib             |        4 |     24,572 |
+| SignedMath                  |        4 |     24,572 |
+| StorageSlot                 |        4 |     24,572 |
+| Strings                     |        4 |     24,572 |
+| Token                       |    3,153 |     21,423 |
+| TokenManager                |    5,634 |     18,942 |
+| TransparentUpgradeableProxy |    2,873 |     21,703 |
+| Users                       |    4,988 |     19,588 |
+| Vault                       |   24,058 |        518 |
+| VaultProxy                  |    2,873 |     21,703 |
+| VaultProxyAdmin             |    1,996 |     22,580 |
+| VerifierManager             |    4,462 |     20,114 |
+| VesselOwner                 |    5,148 |     19,428 |
+| WETH                        |    3,545 |     21,031 |
